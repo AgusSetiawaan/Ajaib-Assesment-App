@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/githubUserListScreenView">
+
+    <fragment
+        android:id="@+id/githubUserListScreenView"
+        android:name="com.example.ajaibassesmentapp.view.GithubUserListScreenView"
+        android:label="GithubUserListScreenView" >
+        <action
+            android:id="@+id/action_githubUserListScreenView_to_githubUserDetailScreenView"
+            app:destination="@id/githubUserDetailScreenView" />
+    </fragment>
+    <fragment
+        android:id="@+id/githubUserDetailScreenView"
+        android:name="com.example.ajaibassesmentapp.view.GithubUserDetailScreenView"
+        android:label="GithubUserDetailScreenView" >
+        <argument
+            android:name="githubUser"
+            app:argType="com.example.ajaibassesmentapp.data.GithubUserData" />
+    </fragment>
+</navigation>
